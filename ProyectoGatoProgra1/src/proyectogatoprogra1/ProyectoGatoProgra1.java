@@ -18,16 +18,20 @@ import javafx.stage.Stage;
  * @author 1
  */
 public class ProyectoGatoProgra1 extends Application {
+    InterfazLogIn iUno;
+    
+    
     
     @Override
     public void start(Stage primaryStage) {
         Button btn = new Button();
+        
         btn.setText("Say 'Hello World'");
         btn.setOnAction(new EventHandler<ActionEvent>() {
             
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
+                iUno = new InterfazLogIn();
             }
         });
         
@@ -46,7 +50,7 @@ public class ProyectoGatoProgra1 extends Application {
      */
     public static void main(String[] args) {
         
-        System.out.println(" jale polo ");
+       
         launch(args);
     }
     
