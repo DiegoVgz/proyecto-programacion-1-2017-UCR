@@ -46,7 +46,7 @@ public class ProyectoGatoProgra1 extends Application {
      */
     public static void main(String[] args) {
         
-        System.out.println("  hoa melissa");
+        System.out.println(" jale polo ");
         launch(args);
     }
     
