@@ -49,10 +49,15 @@ public class InterfazLogIn {
         btn_inicioJuego.setGraphic(new ImageView(imagen));
         btn_inicioJuego.setStyle("-fx-background-color: gray;");
         btn_inicioJuego.setFont(Font.font("Kristen ITC",12));
+        btn_inicioJuego.setTextFill(Color.DARKCYAN);
+       
+        
 
         btn_inicioJuego.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+                
+                btn_inicioJuego.setTextFill(Color.DARKCYAN);
 
                 nombre1 = tfd_jugardor1.getText();
                 nombre2 = tfd_jugardor2.getText();
@@ -61,11 +66,11 @@ public class InterfazLogIn {
         });
 
         tfd_jugardor1 = new TextField();
-        tfd_jugardor1.setPromptText("Ingrese el nombre del jugar 1");
+        tfd_jugardor1.setPromptText("Ingrese el nombre del jugador 1");
         tfd_jugardor1.setFont(Font.font("Kristen ITC", 12));
 
         tfd_jugardor2 = new TextField();
-        tfd_jugardor2.setPromptText("Ingrese el nombre del jugar 2");
+        tfd_jugardor2.setPromptText("Ingrese el nombre del jugador 2");
         tfd_jugardor2.setFont(Font.font("Kristen ITC",12));
 
         VBox ventana1 = new VBox();

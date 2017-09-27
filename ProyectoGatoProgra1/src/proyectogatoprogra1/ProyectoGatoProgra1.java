@@ -34,7 +34,8 @@ import javafx.stage.Stage;
  * @author 1
  */
 public class ProyectoGatoProgra1 extends Application {
-    InterfazLogIn iUno;
+    InterfazLogIn InterfazLogIn1;
+    InterfazCréditos InterfazCreditos2; 
     
     
     @Override
@@ -79,7 +80,7 @@ public class ProyectoGatoProgra1 extends Application {
         rb_ejercicioTres.setFont(Font.font("Kristen ITC",14));
         
         
-        VBox ventanaPrincipal = new VBox(texto,rb_ejercicioUno,rb_ejercicioDos,rb_ejercicioTres,btn);
+        VBox ventanaPrincipal = new VBox(texto,rb_ejercicioUno,rb_ejercicioDos,rb_ejercicioTres);
         ventanaPrincipal.setSpacing(30);
         ventanaPrincipal.setAlignment(Pos.CENTER);
         
@@ -88,18 +89,41 @@ public class ProyectoGatoProgra1 extends Application {
         
         
        rb_ejercicioUno.setOnAction((event) -> {
-          iUno = new InterfazLogIn();
-          root.setRight(iUno.ventanaLogIn());
+            rb_ejercicioUno.setTextFill(Color.DARKCYAN);
+            rb_ejercicioDos.setTextFill(Color.BLACK);
+            rb_ejercicioTres.setTextFill(Color.BLACK);
+           
+          InterfazLogIn1 = new InterfazLogIn();
+          root.setRight(InterfazLogIn1.ventanaLogIn());
            
        });
+       
+       rb_ejercicioDos.setOnAction((event) -> {
+         rb_ejercicioDos.setTextFill(Color.DARKCYAN);
+            rb_ejercicioUno.setTextFill(Color.BLACK);
+            rb_ejercicioTres.setTextFill(Color.BLACK);
+           
+         
+       });
+       
+       
+       rb_ejercicioTres.setOnAction((event) -> {
+       rb_ejercicioTres.setTextFill(Color.DARKCYAN);
+       rb_ejercicioDos.setTextFill(Color.BLACK);
+       rb_ejercicioUno.setTextFill(Color.BLACK);
+       
+       InterfazCreditos2 = new InterfazCréditos();
+       root.setRight(InterfazCreditos2.creditos());
+       });
+       
             
      
         
         btn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                iUno = new InterfazLogIn();
-                root.setRight(iUno.ventanaLogIn());
+                InterfazLogIn1 = new InterfazLogIn();
+                root.setRight(InterfazLogIn1.ventanaLogIn());
             }
         });
         
